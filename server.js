@@ -5,7 +5,7 @@ const app = express();
 app.use(cors());
 
 const convertToRoman = (num) => {
-    
+    // Basic 'Out of range' error handling    
     if (num < 1 || num > 3999) return "Out of range";
 
     // Simple roman numeral map

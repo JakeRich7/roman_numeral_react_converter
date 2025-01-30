@@ -40,8 +40,12 @@ This project includes a web service and UI that converts an integer to its corre
 - babel-jest
 - supertest
 
+### Unit Test Commands
+```bash
+    npm run unit-tests
+```
 
-## Docker Commands
+### Docker Commands
 To build and execute docker:
 ```bash
     docker-compose build
@@ -51,3 +55,6 @@ To terminate docker:
 ```bash
     docker-compose down
 ```
+
+### Reference for Roman Numberal Specification:
+- https://en.wikipedia.org/wiki/Roman_numerals
