@@ -39,3 +39,15 @@ This project includes a web service and UI that converts an integer to its corre
 - jest
 - babel-jest
 - supertest
+
+
+## Docker Commands
+To build and execute docker:
+```bash
+    docker-compose build
+    docker-compose up
+```
+To terminate docker:
+```bash
+    docker-compose down
+```
