@@ -5,12 +5,12 @@ This project includes a web service and UI that converts an integer to its corre
 ### Running the Project
 
 #### Backend (Express)
-1. Navigate to the backend folder
+1. Navigate to the backend folder (root)
 2. Install dependencies: `npm install`
 3. Start the server: `npm start` (server will run on http://localhost:8080)
 
 #### Frontend (React)
-1. Navigate to the frontend folder
+1. Navigate to the frontend folder (roman-numeral-ui)
 2. Install dependencies: `npm install`
 3. Start the app: `npm start` (app will run on http://localhost:3000)
 
@@ -40,21 +40,19 @@ This project includes a web service and UI that converts an integer to its corre
 - babel-jest
 - supertest
 
-### Unit Test Commands
-```bash
-    npm run unit-tests
-```
+### Run Unit Tests Command
+`npm run unit-tests`
 
 ### Docker Commands
 To build and execute docker:
-```bash
-    docker-compose build
-    docker-compose up
-```
+`docker-compose build`
+`docker-compose up`
+
 To terminate docker:
-```bash
-    docker-compose down
-```
+`docker-compose down`
 
 ### Reference for Roman Numerals Specification:
 - https://en.wikipedia.org/wiki/Roman_numerals
+
+### Justification for Component Libary chosen:
+- You favor 'Adobe React Spectrum', so that's what I used
