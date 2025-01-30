@@ -5,7 +5,7 @@ const app = express();
 app.use(cors());
 
 const convertToRoman = (num) => {
-    if (num < 1 || num > 3999) return "Error: Out of range";
+    if (num < 1 || num > 3999) return "Out of range";
 
     const romanMap = [
         { value: 1000, numeral: "M" },
@@ -42,12 +42,16 @@ app.get("/romannumeral", (req, res) => {
     }
 
     const romanNumeral = convertToRoman(number);
-    if (romanNumeral.startsWith("Error")) {
+    if (romanNumeral.startsWith("Out of range")) {
         return res.status(400).json({ error: romanNumeral });
     }
 
     res.json({ input: query, output: romanNumeral });
 });
 
-const PORT = process.env.PORT || 8080;
-app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
+if (require.main === module) {
+    const PORT = process.env.PORT || 8080;
+    app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
+  }
+
+module.exports = { app, convertToRoman };
