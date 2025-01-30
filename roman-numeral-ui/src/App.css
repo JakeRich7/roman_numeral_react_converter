@@ -28,8 +28,9 @@
   color: #61dafb;
 }
 
-#root > div > div > form > div > span {
-  color: red; /* This will force the text to be red */
+#root>div>div>form>div>span {
+  color: red;
+  /* This will force the text to be red */
   font-size: 14px;
   font-weight: bold;
 }
@@ -38,21 +39,24 @@
   from {
     transform: rotate(0deg);
   }
+
   to {
     transform: rotate(360deg);
   }
 }
 
 body {
-  background-color: var(--spectrum-global-color-gray-100);
-  color: var(--spectrum-global-color-gray-900);
+  background-color: #4e4141;
 }
 
+/* Light mode styles */
+#root>div>div {
+  background-color: #ffffff;
+}
+
+/* Dark mode styles */
 @media (prefers-color-scheme: dark) {
-  body {
-      background-color: var(--spectrum-global-color-gray-800);
-      color: var(--spectrum-global-color-gray-100);
+  #root>div>div {
+    background-color: #121212;
   }
 }
-
-

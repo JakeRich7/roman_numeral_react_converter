@@ -5,8 +5,10 @@ const app = express();
 app.use(cors());
 
 const convertToRoman = (num) => {
+    
     if (num < 1 || num > 3999) return "Out of range";
 
+    // Simple roman numeral map
     const romanMap = [
         { value: 1000, numeral: "M" },
         { value: 900, numeral: "CM" },
@@ -23,6 +25,7 @@ const convertToRoman = (num) => {
         { value: 1, numeral: "I" },
     ];
 
+    // Efficient roman numeral conversion
     let result = "";
     for (const { value, numeral } of romanMap) {
         while (num >= value) {
