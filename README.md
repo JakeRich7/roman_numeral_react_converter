@@ -56,5 +56,5 @@ To terminate docker:
     docker-compose down
 ```
 
-### Reference for Roman Numberal Specification:
+### Reference for Roman Numeral Specification:
 - https://en.wikipedia.org/wiki/Roman_numerals
